@@ -1,10 +1,10 @@
 {
     "scripts": {
         "start": "ls -l /tmp/tsx-0 ; tsx index.ts",
-        "build": "docker-compose build",
-        "up": "docker-compose up",
-        "down": "docker-compose down",
-        "bash": "docker-compose run test-tsx bash"
+        "build": "docker compose build",
+        "up": "docker compose up",
+        "down": "docker compose down",
+        "bash": "docker compose run test-tsx bash"
     },
     "dependencies": {
         "tsx": "4.7.0"
