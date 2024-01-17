@@ -1,0 +1,5 @@
+services:
+  test-tsx:
+    build:
+      context: .
+      dockerfile: Dockerfile
