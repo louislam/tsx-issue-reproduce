@@ -10,10 +10,12 @@ jobs:
         run: docker-compose build
 
       - name: First run
-        run: docker-compose up
+        run: docker-compose up -d
 
       - name: Restart the stack
         run: docker-compose stop
 
       - name: Second run
+        if: always()
         run: docker-compose up --exit-code-from test-tsx
+        timeout-minutes: 1
