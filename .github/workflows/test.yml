@@ -17,9 +17,9 @@ jobs:
         run: docker-compose up -d
 
       - name: 1st try - Stop the stack
-        run: docker-compose down
+        run: docker-compose stop
 
-      - name: 1st try - Second again
+      - name: 1st try - Second run
         run: docker-compose up --exit-code-from test-tsx
 
       # 2nd try
@@ -27,9 +27,9 @@ jobs:
         run: docker-compose up -d
 
       - name: 2nd try - Stop the stack
-        run: docker-compose down
+        run: docker-compose stop
 
-      - name: 2nd try - Run again
+      - name: 2nd try - Second run
         run: docker-compose up --exit-code-from test-tsx
 
       # 3rd try
@@ -37,9 +37,9 @@ jobs:
         run: docker-compose up -d
 
       - name: 3rd try - Stop the stack
-        run: docker-compose down
+        run: docker-compose stop
 
-      - name: 3rd try - Run again
+      - name: 3rd try - Second run
         run: docker-compose up --exit-code-from test-tsx
 
       # 4th try
@@ -47,7 +47,7 @@ jobs:
         run: docker-compose up -d
 
       - name: 4th try - Stop the stack
-        run: docker-compose down
+        run: docker-compose stop
 
-      - name: 4th try - Run again
+      - name: 4th try - Second run
         run: docker-compose up --exit-code-from test-tsx
