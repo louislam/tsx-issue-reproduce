@@ -10,11 +10,22 @@ jobs:
         run: docker-compose build
 
       - name: First run
-        run: docker-compose up -d
-
-      - name: Restart the stack
-        run: docker-compose stop
-
-      - name: Second run
         run: docker-compose up
-        timeout-minutes: 1
+
+      - name: Run again
+        run: docker-compose up
+
+      - name: Run again
+        run: docker-compose up
+
+      - name: Run again
+        run: docker-compose up
+
+      - name: Run again
+        run: docker-compose up
+
+      - name: Run again
+        run: docker-compose up
+
+      - name: Run again
+        run: docker-compose up
