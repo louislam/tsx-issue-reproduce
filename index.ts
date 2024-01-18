@@ -12,6 +12,6 @@ setInterval(() => {
         // It is working,
         if (Date.now() - start > 10000) {
             console.log("OK! Stopping this stack");
-            childProcess.execSync("docker-compose stop");
+            childProcess.execSync("/usr/local/bin/docker-compose stop");
         }
 }, 2000);
