@@ -1,5 +1,4 @@
 import * as fs from "fs";
-import * as childProcess from "child_process";
 
 let start = Date.now();
 
@@ -9,9 +8,8 @@ setInterval(() => {
             console.log(files);
         });
 
-        // It is working,
+        // It is working
         if (Date.now() - start > 10000) {
-            console.log("OK! Stopping this stack");
-            childProcess.execSync("/usr/local/bin/docker-compose stop");
+            process.exit();
         }
 }, 2000);

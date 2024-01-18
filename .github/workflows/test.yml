@@ -12,23 +12,42 @@ jobs:
       - name: Whereis docker-compose
         run: whereis docker-compose
 
-      - name: First run
-        run: docker-compose up
+      # First try
+      - name: 1st try - First run
+        run: docker-compose up -d
 
-      - name: Run again
-        run: docker-compose up
+      - name: 1st try - Stop the stack
+        run: docker-compose down
 
-      - name: Run again
-        run: docker-compose up
+      - name: 1st try - Second again
+        run: docker-compose up --exit-code-from test-tsx
 
-      - name: Run again
-        run: docker-compose up
+      # 2nd try
+      - name: 2nd try - First run
+        run: docker-compose up -d
 
-      - name: Run again
-        run: docker-compose up
+      - name: 2nd try - Stop the stack
+        run: docker-compose down
 
-      - name: Run again
-        run: docker-compose up
+      - name: 2nd try - Run again
+        run: docker-compose up --exit-code-from test-tsx
 
-      - name: Run again
-        run: docker-compose up
+      # 3rd try
+      - name: 3rd try - First run
+        run: docker-compose up -d
+
+      - name: 3rd try - Stop the stack
+        run: docker-compose down
+
+      - name: 3rd try - Run again
+        run: docker-compose up --exit-code-from test-tsx
+
+      # 4th try
+      - name: 4th try - First run
+        run: docker-compose up -d
+
+      - name: 4th try - Stop the stack
+        run: docker-compose down
+
+      - name: 4th try - Run again
+        run: docker-compose up --exit-code-from test-tsx
