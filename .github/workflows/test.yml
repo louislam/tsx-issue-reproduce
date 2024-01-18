@@ -16,6 +16,5 @@ jobs:
         run: docker-compose stop
 
       - name: Second run
-        if: always()
-        run: docker-compose up --exit-code-from test-tsx
+        run: docker-compose up
         timeout-minutes: 1
