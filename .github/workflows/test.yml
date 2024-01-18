@@ -9,6 +9,9 @@ jobs:
       - name: Build the stack
         run: docker-compose build
 
+      - name: Whereis docker-compose
+        run: whereis docker-compose
+
       - name: First run
         run: docker-compose up
 
