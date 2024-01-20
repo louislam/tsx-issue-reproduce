@@ -4,5 +4,5 @@ WORKDIR /test-tsx
 RUN apt update && apt install -y git
 
 COPY . .
-RUN npm install
+RUN npm install --production
 CMD ["npm", "start"]
