@@ -8,6 +8,6 @@
         "bash": "docker compose run test-tsx bash"
     },
     "dependencies": {
-        "tsx": "4.7.0"
+        "tsx": "git+ssh://git@github.com/louislam/tsx.git#fix-457-build"
     }
 }
